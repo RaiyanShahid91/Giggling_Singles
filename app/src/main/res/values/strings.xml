@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">You &amp; Me</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Login and Register Strings
+    <string name="sign_in">Sign In</string>
+    <string name="please_login_to_enjoy_a_lovable_journey_with_us">Please login to enjoy a lovable Journey with us.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="register_now">Register now</string>
+    <string name="register">Register</string>
+    <string name="please_register_to_enjoy_a_lovable_journey_with_us">Please register to enjoy a lovable Journey with us.</string>
+    <string name="continue_">Continue</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="please_enter_valid_email">Please enter valid email!</string>
+    <string name="_4_photos_are_better_for_your_profile_n_you_can_change_these_later">Photos are better for your profile.\nYou can change these later.</string>
+    <string name="add_your_photos">Add your photos</string>
+    <string name="make_sure_it_s_your_photo">Make sure it\'s your photo</string>
+    <string name="be_happy_in_your_photo">Be happy in your photo</string>
+    <string name="photo_should_not_be_blur">Photo should not be blur</string>
+    <string name="photo_guidelines">Photo guidelines</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="what_s_your_gender">What\'s your gender?</string>
+    <string name="shows_your_age_to_potential_matches">Shows your age to potential matches.</string>
+    <string name="choose_which_best_describe_you_nit_will_help_your_potentials_matcher_to_know_about_your_gender">Choose which best describe you.\nIt will help your potentials matcher to know about your gender.</string>
+    <string name="who_would_you_like_to_date">Who would you like to date?</string>
+    <string name="allow_permission_to_add_photos">Please allow permission for adding photos.</string>
+    <string name="no_user_found_in_database">There is no user record corresponding to this identifier. The user may have been deleted.</string>
+    <string name="if_you_delete_your_account_you_will_permanently">If you delete your account, you will permanently lose your profile, message, photos and matches. \n\nIf you delete your account, this action cannot be undone.\n\n<b>Are you sure you want to delete your account?</b></string>
+    <string name="banned_reason">It\'s important to us that Giggling Singles is a welcoming and safe space for everyone. Unfortunately, we found that you\'ve violated our <font fgcolor="red">Terms of Use</font> and so we\'ve made the decision of removing you from the Giggling Singles Platform. \n\nYou will no longer be able to access your Giggling Singles account or create new accounts in the future.</string>
+
+
+    <string-array name="day">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="month">
+        <item></item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item></item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+        <item>1999</item>
+        <item>1998</item>
+        <item>1997</item>
+        <item>1996</item>
+        <item>1995</item>
+        <item>1994</item>
+        <item>1993</item>
+        <item>1992</item>
+        <item>1991</item>
+        <item>1990</item>
+        <item>1989</item>
+        <item>1988</item>
+        <item>1987</item>
+        <item>1986</item>
+        <item>1985</item>
+        <item>1984</item>
+        <item>1983</item>
+        <item>1982</item>
+        <item>1981</item>
+        <item>1980</item>
+        <item>1979</item>
+        <item>1978</item>
+        <item>1977</item>
+        <item>1976</item>
+        <item>1975</item>
+        <item>1974</item>
+        <item>1973</item>
+        <item>1972</item>
+        <item>1971</item>
+        <item>1970</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.more.viewModel.MoreViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/app_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:text="Welcome to Amored"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_icon" />
+
+        <TextView
+            android:id="@+id/des_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/basic"
+            android:gravity="center"
+            android:text="Please follow these rules."
+            android:textColor="@color/outline_grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleOne" />
+
+        <TextView
+            android:id="@+id/beYourselfTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_check_24"
+            android:drawableTint="@color/purple_700"
+            android:text="Be yourself."
+            android:drawablePadding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/des_txt" />
+
+        <TextView
+            android:id="@+id/beYourselfDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/basic"
+            android:text="Make sure your personal details Are true to who you are."
+            android:drawablePadding="10dp"
+            android:textColor="@color/outline_grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beYourselfTitle" />
+
+        <TextView
+            android:id="@+id/staySafeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_check_24"
+            android:drawableTint="@color/purple_700"
+            android:text="Stay safe."
+            android:drawablePadding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beYourselfDesc" />
+
+        <TextView
+            android:id="@+id/staySafeDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/basic"
+            android:text="Don't be too quick to give out personal information to others."
+            android:drawablePadding="10dp"
+            android:textColor="@color/outline_grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/staySafeTxt" />
+
+        <TextView
+            android:id="@+id/playItCoolTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_check_24"
+            android:drawableTint="@color/purple_700"
+            android:text="Play it cool."
+            android:drawablePadding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/staySafeDes" />
+
+        <TextView
+            android:id="@+id/playItCoolDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/basic"
+            android:text="Respect others and treat them as you would like to be treated."
+            android:drawablePadding="10dp"
+            android:textColor="@color/outline_grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playItCoolTitle" />
+
+        <TextView
+            android:id="@+id/beProactiveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_baseline_check_24"
+            android:drawableTint="@color/purple_700"
+            android:text="Be proactive."
+            android:drawablePadding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playItCoolDes" />
+
+        <TextView
+            android:id="@+id/beProactiveDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/basic"
+            android:text="Always report bad behaviour."
+            android:drawablePadding="10dp"
+            android:textColor="@color/outline_grey"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beProactiveTitle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_in_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_selector_color"
+            android:fontFamily="@font/asap_medium"
+            android:text="I Agree, I will follow above rules."
+            android:textAllCaps="false"
+            android:onClick="@{() -> viewModel.IAgree()}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7000000"
+        android:gravity="center"
+        android:visibility="@{viewModel.showLoader ?  View.VISIBLE : View.GONE}">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView3"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/heart_loading" />
+    </LinearLayout>
+
+    </RelativeLayout>
+</layout>

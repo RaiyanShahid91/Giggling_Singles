@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheetwallper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#121211"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Choose Wallpaper"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/asap_medium"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:padding="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/purple"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/first_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkOne"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lightPurple"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/second_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkTwo"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/lightBlue"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/third_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkThree"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/darkPurple"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/four_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkFour"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/red"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/five_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkFive"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pink"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/six_design"
+                        app:cardCornerRadius="8dp">
+                        <ImageView
+                            android:id="@+id/checkSix"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button_selector_color_2"
+                            android:src="@drawable/ic_baseline_check_24"
+                            app:tint="@color/outline_grey"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/setWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/top_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/logout_design"
+            android:text="Set wallpaper"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/setWallpaper"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/cancel_design"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

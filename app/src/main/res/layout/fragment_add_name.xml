@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.more.viewModel.MoreViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/add_your_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/what_is_your_name"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_your_name_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:layout_marginTop="10dp"
+            android:text="This is how it will appear in Amored. \nYou can't change this later."
+            android:textColor="@color/light_grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_your_name" />
+
+        <EditText
+            android:id="@+id/et_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text_desing_two"
+            android:fontFamily="@font/asap_medium"
+            android:hint="@string/first_name"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@={viewModel.firstNameMutableData}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="@color/outline_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_your_name_grey"
+            tools:ignore="TextFields,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/et_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text_desing_two"
+            android:fontFamily="@font/asap_medium"
+            android:hint="@string/last_name"
+            android:padding="15dp"
+            android:text="@={viewModel.lastNameMutableData}"
+            android:singleLine="true"
+            android:importantForAutofill="no"
+            android:textColorHint="@color/outline_grey"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_first_name"
+            tools:ignore="Autofill,TextFields,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/add_name_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/image_button_design"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white"
+            android:onClick="@{() -> viewModel.addName()}"
+            android:enabled="@{viewModel.firstNameMutableData.length() != 0 || viewModel.lastNameMutableData.length() != 0 }"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7000000"
+            android:gravity="center"
+            android:visibility="@{viewModel.showLoader ?  View.VISIBLE : View.GONE}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView3"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/heart_loading" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

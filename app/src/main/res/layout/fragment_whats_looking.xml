@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.more.viewModel.MoreViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/what_are_you_looking_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/asap_medium"
+        android:text="What are you looking for?"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/what_are_you_looking_des_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/asap_medium"
+        android:text="It's helps you and everyone to find what you're looking for."
+        android:textColor="@color/outline_grey"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/what_are_you_looking_label" />
+
+    <TextView
+        android:id="@+id/you_can_change_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/asap_medium"
+        android:layout_marginTop="10dp"
+        android:text="You can change this later."
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/what_are_you_looking_des_label" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/you_can_change_tv">
+
+        <RadioButton
+            android:id="@+id/relationship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:text="Relationship"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/light_grey"
+            android:background="@drawable/edit_text_design"/>
+
+        <RadioButton
+            android:id="@+id/something_casual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/light_grey"
+            android:text="Something casual"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_design"/>
+
+        <RadioButton
+            android:id="@+id/m_not_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/light_grey"
+            android:text="I'm not sure yet"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_design"/>
+
+        <RadioButton
+            android:id="@+id/prefer_not_to_say"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/light_grey"
+            android:text="Prefer not to say"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_design"/>
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/add_looking_for_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/image_button_design"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        android:enabled="@{viewModel.whatsLookingFor.length() != 0}"
+        android:onClick="@{() -> viewModel.addWhatsLookingFor()}"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7000000"
+        android:gravity="center"
+        android:visibility="@{viewModel.showLoader ?  View.VISIBLE : View.GONE}">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView3"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/heart_loading" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout></layout>

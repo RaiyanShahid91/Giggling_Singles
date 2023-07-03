@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "559354017303",
+    "project_id": "giggling-singles-9605e",
+    "storage_bucket": "giggling-singles-9605e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559354017303:android:0932b5ed6d91c3ee124e52",
+        "android_client_info": {
+          "package_name": "com.dil.singles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559354017303-jp6e9k6998ub9ev5c840v0mqe6dqg2ta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ptO9UmBPhFM5bEysgoaUR0iROeRUP2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559354017303-jp6e9k6998ub9ev5c840v0mqe6dqg2ta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

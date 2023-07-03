@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.edit.EditViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_selector_3">
+
+        <TextView
+            android:id="@+id/add_your_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="Add more about you"
+            android:drawableTint="@color/white"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:onClick="@{() -> viewModel.onBack()}"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_your_bio_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="other people looking for a relationship love to see a bio that shows who you are. (Max char 200)"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_your_bio" />
+
+
+        <EditText
+            android:id="@+id/et_bio"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/chat_background_design"
+            android:fontFamily="@font/asap_medium"
+            android:hint="Enter more about you"
+            android:padding="15dp"
+            android:text="@={viewModel.bio}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:maxLength="200"
+            android:textColorHint="@color/outline_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_your_bio_des"
+            tools:ignore="TextFields,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_name_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:enabled="@{viewModel.bio.length() &gt; 12}"
+            android:onClick="@{() -> viewModel.addBio()}"
+            android:textColor="@color/white"
+            android:background="@drawable/button_selector_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout></layout>

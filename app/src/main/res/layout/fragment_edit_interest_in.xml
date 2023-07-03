@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.edit.EditViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_selector_3">
+
+
+        <TextView
+            android:id="@+id/whats_passion_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="What is your Passions?"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:drawableTint="@color/white"
+            android:drawablePadding="15dp"
+            android:onClick="@{() -> viewModel.onBack()}"
+            android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_your_birthday_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="Pick up thing which love to do. It'll help you match with people who love them too."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whats_passion_label" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_your_birthday_des">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:id="@+id/photography_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Photography"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/singing_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Singing"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/photography_txt"
+                    app:layout_constraintStart_toEndOf="@+id/photography_txt"
+                    app:layout_constraintTop_toTopOf="@+id/photography_txt" />
+
+                <TextView
+                    android:id="@+id/dancing_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Dancing"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/singing_txt"
+                    app:layout_constraintStart_toEndOf="@+id/singing_txt"
+                    app:layout_constraintTop_toTopOf="@+id/singing_txt" />
+
+                <TextView
+                    android:id="@+id/writing_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Writing"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dancing_txt"
+                    app:layout_constraintStart_toEndOf="@+id/dancing_txt"
+                    app:layout_constraintTop_toTopOf="@+id/dancing_txt" />
+
+                <TextView
+                    android:id="@+id/yoga_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Yoga"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/photography_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/photography_txt" />
+
+                <TextView
+                    android:id="@+id/running_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Running"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/yoga_txt"
+                    app:layout_constraintStart_toEndOf="@+id/yoga_txt"
+                    app:layout_constraintTop_toTopOf="@+id/yoga_txt" />
+
+                <TextView
+                    android:id="@+id/cricket_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Cricket"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/running_txt"
+                    app:layout_constraintStart_toEndOf="@+id/running_txt"
+                    app:layout_constraintTop_toTopOf="@+id/running_txt" />
+
+                <TextView
+                    android:id="@+id/gym_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Gym"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cricket_txt"
+                    app:layout_constraintStart_toEndOf="@+id/cricket_txt"
+                    app:layout_constraintTop_toTopOf="@+id/cricket_txt" />
+
+                <TextView
+                    android:id="@+id/football_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Football"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/gym_txt"
+                    app:layout_constraintStart_toEndOf="@+id/gym_txt"
+                    app:layout_constraintTop_toTopOf="@+id/gym_txt" />
+
+                <TextView
+                    android:id="@+id/tennis_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Tennis"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/yoga_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/yoga_txt" />
+
+                <TextView
+                    android:id="@+id/gaming_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Gaming"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tennis_txt"
+                    app:layout_constraintStart_toEndOf="@+id/tennis_txt"
+                    app:layout_constraintTop_toTopOf="@+id/tennis_txt" />
+
+                <TextView
+                    android:id="@+id/travelling_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Travelling"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/gaming_txt"
+                    app:layout_constraintStart_toEndOf="@+id/gaming_txt"
+                    app:layout_constraintTop_toTopOf="@+id/gaming_txt" />
+
+                <TextView
+                    android:id="@+id/watching_movies_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Watching movies"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/travelling_txt"
+                    app:layout_constraintStart_toEndOf="@+id/travelling_txt"
+                    app:layout_constraintTop_toTopOf="@+id/travelling_txt" />
+
+                <TextView
+                    android:id="@+id/camping_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Camping"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/tennis_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/tennis_txt" />
+
+                <TextView
+                    android:id="@+id/cooking_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Cooking"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/camping_txt"
+                    app:layout_constraintStart_toEndOf="@+id/camping_txt"
+                    app:layout_constraintTop_toTopOf="@+id/camping_txt" />
+
+                <TextView
+                    android:id="@+id/swimming_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Swimming"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cooking_txt"
+                    app:layout_constraintStart_toEndOf="@+id/cooking_txt"
+                    app:layout_constraintTop_toTopOf="@+id/cooking_txt" />
+
+                <TextView
+                    android:id="@+id/cycling_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/interest_two_design"
+                    android:padding="10dp"
+                    android:text="Cycling"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/swimming_txt"
+                    app:layout_constraintStart_toEndOf="@+id/swimming_txt"
+                    app:layout_constraintTop_toTopOf="@+id/swimming_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_interest_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:enabled="@{viewModel.stringPassion.length() &gt; 12}"
+            android:textColor="@color/white"
+            android:background="@drawable/button_selector_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

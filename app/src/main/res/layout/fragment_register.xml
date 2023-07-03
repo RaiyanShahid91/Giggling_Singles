@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.register.RegisterViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/sign_in_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_image"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/basic"
+                android:text="Welcome to Giggling Singles"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/login_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_in_label"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/basic"
+                android:text="Please provide email and password"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/login_image"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/app_icon"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_layout">
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/tfFilledEmail"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:hint="@string/email"-->
+<!--                app:boxBackgroundColor="@color/black2"-->
+<!--                app:hintTextColor="@color/outline_grey"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_email"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@={viewModel.emailMutableData}"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:importantForAutofill="no" />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <EditText
+                android:id="@+id/tfFilledEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_text_desing_two"
+                android:fontFamily="@font/asap_medium"
+                android:hint="Please add your email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:padding="18dp"
+                android:singleLine="true"
+                android:text="@={viewModel.emailMutableData}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/outline_grey"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/tfFilledPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tfFilledEmail"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_text_desing_two"
+                android:fontFamily="@font/asap_medium"
+                android:hint="Please add your password"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:padding="18dp"
+                android:password="true"
+                android:singleLine="true"
+                android:text="@={viewModel.passwordMutableData}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/outline_grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tfFilledPassword"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/asap_medium"
+                android:onClick="@{() -> viewModel.onNavigationClicked(R.id.nav_change_password)}"
+                android:padding="5dp"
+                android:text="@string/forget_password"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/txt_forget_password"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_selector_color"
+                android:enabled="@{viewModel.isValidEmail(viewModel.emailMutableData) &amp; viewModel.isValidPassword(viewModel.passwordMutableData) }"
+                android:text="@string/continue_"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basic"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/black2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/register_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="@string/login"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{viewModel.showLoader ?  View.VISIBLE : View.GONE}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView3"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/heart_loading" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

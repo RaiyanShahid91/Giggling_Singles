@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.settings.SettingsViewModel" />
+
+        <import type="android.view.View" />
+        <import type="com.dil.singles.R" />
+        <import type="android.content.Context" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_selector_3"
+        tools:context=".activity.SettingsActivity"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/top_design"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtGrp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/asap_medium"
+                android:text="Settings "
+                android:onClick="@{() -> viewModel.onBack()}"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/acoountSettingLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Account settings"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/emailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Email"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/acoountSettingLabel" />
+
+                <TextView
+                    android:id="@+id/emailTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:drawableEnd="@drawable/ic_baseline_edit_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/outline_grey"
+                    android:fontFamily="@font/basic"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:text="@={viewModel.emailText}"
+                    android:onClick="@{() -> viewModel.changeEmail(context)}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/acoountSettingLabel" />
+
+                <TextView
+                    android:id="@+id/verifyEmailTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Verify a email to help secure your account"
+                    android:textColor="@color/outline_grey"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+
+                <TextView
+                    android:id="@+id/changePasswordLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/button_background_three"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="    Change Password"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/outline_grey"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/verifyEmailTxt" />
+
+                <TextView
+                    android:id="@+id/discoveryLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Discovery settings"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/changePasswordLabel" />
+
+                <TextView
+                    android:id="@+id/locationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Current location"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discoveryLabel" />
+
+                <TextView
+                    android:id="@+id/locationTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/basic"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:text="@={viewModel.locationTxt}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discoveryLabel" />
+
+                <TextView
+                    android:id="@+id/globalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Go Global"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locationTxt" />
+
+                <TextView
+                    android:id="@+id/globalTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/basic"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:text="@={viewModel.globalTxt}"
+                    android:drawableEnd="@drawable/ic_baseline_edit_24"
+                    android:drawableTint="@color/outline_grey"
+                    android:drawablePadding="10dp"
+                    android:onClick="@{() -> viewModel.goGlobal(context)}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/locationTxt" />
+
+                <TextView
+                    android:id="@+id/globalDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Going global will allow you to see people nearby and from around the world"
+                    android:textColor="@color/outline_grey"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/globalTxt" />
+
+                <TextView
+                    android:id="@+id/blockTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="   Block contacts"
+                    android:textColor="@color/light_grey"
+                    android:textSize="15sp"
+                    android:onClick="@{() -> viewModel.blocked()}"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/button_background_three"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/globalDes" />
+
+                <TextView
+                    android:id="@+id/interestedInLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Interested in"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/blockTxt" />
+
+                <TextView
+                    android:id="@+id/interestedTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:text="@={viewModel.interestedTxt}"
+                    android:drawableEnd="@drawable/ic_baseline_edit_24"
+                    android:drawableTint="@color/outline_grey"
+                    android:drawablePadding="10dp"
+                    android:onClick="@{() -> viewModel.interestedIn(context)}"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/interestedInLabel" />
+
+                <TextView
+                    android:id="@+id/feebackLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Feedback"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:onClick="@{() -> viewModel.feedback(context)}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/interestedTxt" />
+
+                <TextView
+                    android:id="@+id/contactsUsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Contact Us"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feebackLabel" />
+
+                <TextView
+                    android:id="@+id/helpSupportTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Help &amp; Support"
+                    android:textColor="@color/outline_grey"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contactsUsLabel" />
+
+                <TextView
+                    android:id="@+id/shareTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="   Share Amored"
+                    android:textColor="@color/light_grey"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:onClick="@{() -> viewModel.shareApp(context)}"
+                    android:background="@drawable/button_background_three"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/helpSupportTxt" />
+
+
+                <TextView
+                    android:id="@+id/privacyLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Privacy"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shareTxt" />
+
+                <TextView
+                    android:id="@+id/cookiesPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Cookie Policy"
+                    android:textColor="@color/outline_grey"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacyLabel" />
+
+                <TextView
+                    android:id="@+id/privacyPolicyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cookiesPolicy" />
+
+                <TextView
+                    android:id="@+id/aboutLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:text="About"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacyPolicyLabel" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/logout_border_design"
+                    android:text="Logout"
+                    android:onClick="@{() -> viewModel.signOut(context)}"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutLabel" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/app_icon_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="200dp"
+                    app:cardBackgroundColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logoutBtn">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/app_icon"
+                        android:layout_margin="2dp"
+                        android:layout_gravity="center"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/versionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewModel.versionText}"
+                    android:textColor="@color/ic_launcher_background"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/app_icon_img" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/logout_design"
+                    android:text="Delete Account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/versionTxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

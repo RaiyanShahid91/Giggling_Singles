@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_nav_graph"
+    app:startDestination="@id/nav_settings">
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.dil.singles.fragments.settings.SettingsFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_blocked"
+        android:name="com.dil.singles.fragments.settings.BlockedFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_blocked" />
+
+    <fragment
+        android:id="@+id/nav_edit_change_password"
+        android:name="com.dil.singles.fragments.changepassword.ChangePassword"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+</navigation>

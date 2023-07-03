@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheetMoreDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#121211"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Report"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="15dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_grey"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="It's spam"
+                android:id="@+id/first"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:padding="13dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nudity or sexual activity"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/second"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="I just don't like it"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/third"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Scam or fraud"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/fourth"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hate speech or symbols"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/fifth"
+                android:padding="13dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="False information"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/sixth"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bullying or harassment"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/seventh"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Violence or dangerous organisations"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/eight"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Intellectual property violation"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/ninth"
+                android:padding="13dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sale of illegal or regulated goods"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/tenth"
+                android:padding="13dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Suicide or self-injury"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/eleventh"
+                android:padding="13dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Eating disorders"
+                android:textColor="@color/outline_grey"
+                android:textSize="16sp"
+                android:id="@+id/twelve"
+                android:padding="13dp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close_label"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/top_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/logout_design"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

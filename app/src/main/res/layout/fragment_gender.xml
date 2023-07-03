@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.dil.singles.fragments.more.viewModel.MoreViewModel" />
+
+        <import type="android.view.View" />
+
+        <import type="com.dil.singles.R" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/what_your_gender_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/what_s_your_gender"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/what_your_gender_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:drawablePadding="-20dp"
+            android:fontFamily="@font/asap_medium"
+            android:padding="3dp"
+            android:text="@string/choose_which_best_describe_you_nit_will_help_your_potentials_matcher_to_know_about_your_gender"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/what_your_gender_label" />
+
+        <TextView
+            android:id="@+id/you_can_change_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/asap_medium"
+            android:layout_marginTop="10dp"
+            android:text="You can change this later."
+            android:textColor="@color/light_grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/what_your_gender_des" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/you_can_change_tv">
+
+            <RadioButton
+                android:id="@+id/women"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:padding="5dp"
+                android:text="Women"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/men"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:text="Men"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/gay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:padding="5dp"
+                android:text="Gay"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/asexual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:text="Asexual"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/bisexual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:padding="5dp"
+                android:text="Bisexual"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/lesbian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_design"
+                android:checked="false"
+                android:padding="5dp"
+                android:text="Lesbian"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:buttonTint="@color/light_grey"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/add_gender_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/image_button_design"
+            android:enabled="@{viewModel.gender.length() != 0}"
+            android:onClick="@{() -> viewModel.addGender()}"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7000000"
+            android:gravity="center"
+            android:visibility="@{viewModel.showLoader ?  View.VISIBLE : View.GONE}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView3"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/heart_loading" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

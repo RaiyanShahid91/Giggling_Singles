@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login_register"
+    app:startDestination="@id/nav_splash_fragment">
+
+    <fragment
+        android:id="@+id/nav_splash_fragment"
+        android:name="com.dil.singles.fragments.splashscreen.SplashScreenFragment"
+        android:label="Splash Screen"
+        tools:layout="@layout/fragment_splash_screen" />
+
+    <fragment
+        android:id="@+id/nav_welcome_fragment"
+        android:name="com.dil.singles.fragments.welcome.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action android:id="@+id/action_splash_to_welcome"
+            app:destination="@+id/nav_welcome_fragment"
+            app:popUpTo="@+id/nav_welcome_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_register_fragment"
+        android:name="com.dil.singles.fragments.register.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/nav_add_name_fragment"
+        android:name="com.dil.singles.fragments.more.AddNameFragment"
+        android:label="Add Name"
+        tools:layout="@layout/fragment_add_name" />
+
+    <fragment
+        android:id="@+id/nav_add_photo_fragment"
+        android:name="com.dil.singles.fragments.more.AddPhotoFragment"
+        android:label="Add Photo"
+        tools:layout="@layout/fragment_add_photo" />
+
+    <fragment
+        android:id="@+id/nav_bio_fragment"
+        android:name="com.dil.singles.fragments.more.BioFragment"
+        android:label="Bio"
+        tools:layout="@layout/fragment_bio" />
+
+    <fragment
+        android:id="@+id/nav_date_of_birth_fragment"
+        android:name="com.dil.singles.fragments.more.DateofBirthFragment"
+        android:label="Date of Birth"
+        tools:layout="@layout/fragment_dateof_birth" />
+
+    <fragment
+        android:id="@+id/nav_drink_fragment"
+        android:name="com.dil.singles.fragments.more.DrinkFragment"
+        android:label="Drink"
+        tools:layout="@layout/fragment_drink" />
+
+    <fragment
+        android:id="@+id/nav_education_fragment"
+        android:name="com.dil.singles.fragments.more.EducationFragment"
+        android:label="Education"
+        tools:layout="@layout/fragment_education" />
+
+    <fragment
+        android:id="@+id/nav_gender_fragment"
+        android:name="com.dil.singles.fragments.more.GenderFragment"
+        android:label="Gender"
+        tools:layout="@layout/fragment_gender" />
+
+    <fragment
+        android:id="@+id/nav_height_fragment"
+        android:name="com.dil.singles.fragments.more.HeightFragment"
+        android:label="Height"
+        tools:layout="@layout/fragment_height" />
+
+    <fragment
+        android:id="@+id/nav_religion_fragment"
+        android:name="com.dil.singles.fragments.more.RelegionFragment"
+        android:label="Religion"
+        tools:layout="@layout/fragment_relegion" />
+
+    <fragment
+        android:id="@+id/nav_smoke_fragment"
+        android:name="com.dil.singles.fragments.more.SmokeFragment"
+        android:label="Smoke"
+        tools:layout="@layout/fragment_smoke" />
+
+    <fragment
+        android:id="@+id/nav_whats_looking_fragment"
+        android:name="com.dil.singles.fragments.more.WhatsLookingFragment"
+        android:label="Whats Looking"
+        tools:layout="@layout/fragment_whats_looking" />
+
+    <fragment
+        android:id="@+id/nav_whome_date_fragment"
+        android:name="com.dil.singles.fragments.more.WhomToDateFragment"
+        android:label="Whome to date"
+        tools:layout="@layout/fragment_whome_to_date" />
+
+    <fragment
+        android:id="@+id/nav_your_interested_fragment"
+        android:name="com.dil.singles.fragments.more.YourInterestFragment"
+        android:label="Your Interest"
+        tools:layout="@layout/fragment_your_interest" />
+
+    <fragment
+        android:id="@+id/nav_zodiac_fragment"
+        android:name="com.dil.singles.fragments.more.ZodiacFragment"
+        android:label="Zodiac"
+        tools:layout="@layout/fragment_zodiac" />
+
+    <fragment
+        android:id="@+id/nav_change_password"
+        android:name="com.dil.singles.fragments.changepassword.ChangePassword"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/nav_language_fragment"
+        android:name="com.dil.singles.fragments.more.LanguageFragment"
+        android:label="language"
+        tools:layout="@layout/fragment_language" />
+
+    <fragment
+        android:id="@+id/nav_Welcome_Agree_fragment"
+        android:name="com.dil.singles.fragments.more.WelcomeToAgreeFragment"
+        android:label="language"
+        tools:layout="@layout/fragment_welcome_to_agree" />
+
+    <fragment
+        android:id="@+id/nav_banned_fragment"
+        android:name="com.dil.singles.fragments.banned.BannedFragment"
+        android:label="language"
+        tools:layout="@layout/fragment_banned" />
+
+</navigation>

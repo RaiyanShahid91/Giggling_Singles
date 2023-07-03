@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_edit_nav_graph"
+    app:startDestination="@id/nav_change_bio_fragment">
+
+    <fragment
+        android:id="@+id/nav_change_image_fragment"
+        android:name="com.dil.singles.fragments.edit.ChangeUserImageFragment"
+        android:label="fragment_change_Image"
+        tools:layout="@layout/fragment_change_user_image" />
+
+    <fragment
+        android:id="@+id/nav_change_interested_fragment"
+        android:name="com.dil.singles.fragments.edit.EditInterestInFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_interest_in" />
+
+    <fragment
+        android:id="@+id/nav_change_education_fragment"
+        android:name="com.dil.singles.fragments.edit.EditEducationFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_education" />
+
+    <fragment
+        android:id="@+id/nav_change_smoking_fragment"
+        android:name="com.dil.singles.fragments.edit.EditSmokingFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_smoking" />
+
+    <fragment
+        android:id="@+id/nav_change_drinking_fragment"
+        android:name="com.dil.singles.fragments.edit.EditDrinkingFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_drinking" />
+
+    <fragment
+        android:id="@+id/nav_change_zodiac_fragment"
+        android:name="com.dil.singles.fragments.edit.EditZodiacFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_zodiac" />
+
+    <fragment
+        android:id="@+id/nav_change_Height_fragment"
+        android:name="com.dil.singles.fragments.edit.EditHeightFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_height" />
+
+    <fragment
+        android:id="@+id/nav_change_language_fragment"
+        android:name="com.dil.singles.fragments.edit.EditLanguageFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_language" />
+
+    <fragment
+        android:id="@+id/nav_change_bio_fragment"
+        android:name="com.dil.singles.fragments.edit.EditBioFragment"
+        android:label="fragment_change_Interested"
+        tools:layout="@layout/fragment_edit_bio" />
+
+</navigation>
