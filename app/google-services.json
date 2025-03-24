@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "559354017303",
-    "project_id": "giggling-singles-9605e",
-    "storage_bucket": "giggling-singles-9605e.appspot.com"
+    "project_number": "983316018842",
+    "project_id": "you-me-c0a9b",
+    "storage_bucket": "you-me-c0a9b.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:559354017303:android:0932b5ed6d91c3ee124e52",
+        "mobilesdk_app_id": "1:983316018842:android:db50b79c686e68b18e1123",
         "android_client_info": {
           "package_name": "com.dil.singles"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "559354017303-jp6e9k6998ub9ev5c840v0mqe6dqg2ta.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB_ptO9UmBPhFM5bEysgoaUR0iROeRUP2M"
+          "current_key": "AIzaSyAbkoWo2WFsmNxAjTSINCImodsoquMKMKE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "559354017303-jp6e9k6998ub9ev5c840v0mqe6dqg2ta.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
